@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>M2-D6</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="M2-D6-INDEX.css" />
+  </head>
+  <body>
+    <!-- EXERCISE 1
+        Use the specific bootstrap component to implement a Breadcrumb
+        -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Data</li>
+      </ol>
+    </nav>
+    <!-- EXERCISE 2
+            Create a Jumbotron section with a quick explanation / image of the website
+        -->
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">THE ALBUM STORE</h1>
+        <p class="lead">Here you find the best music and album in the WORLD.</p>
+      </div>
+    </div>
+
+    <!-- EXERCISE 3
+            Foreach album in the favorite list, place the genre inside a badge
+        -->
+    <div class="container">
+      <ol>
+        <li>
+          <h2>Gulddreng <span class="badge badge-dark">POP</span></h2>
+        </li>
+        <li>
+          <h2>MC Clemens <span class="badge badge-pill badge-success">RAP</span></h2>
+        </li>
+        <li>
+          <h2>D.A.D <span class="badge badge-pill badge-danger">ROCK</span></h2>
+        </li>
+      </ol>
+    </div>
+
+    <!-- EXERCISE 4
+            Foreach album in the favorite list, use the Bootstrap Card to contain it.
+            Use card layouts to format it in the best and more compatible way.
+        -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src="/img/Armin.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src="/img/Clemens.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src="/img/Gulddreng.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img src="/img/Morten.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXERCISE 5
+            Place the tracklist inside a Bootstrap table.
+            The row column must be alternate.
+            Use one column for the track order, one of the title and one for the length.
+            (If you want, you can also add extra columns)
+        -->
+
+    <div class="container">
+      <h2>Tracklist</h2>
+      <div class=" table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Delete</th>
+              <th>Track Order</th>
+              <th>Title</th>
+              <th>Length</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><button type="button" class="btn btn-danger ">Danger</button></td>
+              <td>1.</td>
+              <td>Welcome</td>
+              <td>3:55</td>
+            </tr>
+            <tr>
+              <td><button type="button" class="btn btn-danger ">Danger</button></td>
+              <td>2.</td>
+              <td>Ohhh We In the Middel</td>
+              <td>2:44</td>
+            </tr>
+
+            <tr>
+              <td><button type="button" class="btn btn-danger ">Danger</button></td>
+              <td>3.</td>
+              <td>End</td>
+              <td>4:54</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- EXERCISE 9
+            Add a button "Add Track" under the track list the album
+        -->
+    <button type="button" class="btn btn-primary btn-block mb-5" data-toggle="modal" data-target="#myModal">Add Track</button>
+
+    <!-- EXERCISE 10
+            On "Add Track" button, open a new modal.
+            The modal shall contain a form with:
+            - Track number
+            - Track name
+            - Track lenght
+            - Track featuring
+            - Live Track (checkbox)
+            The fields should be inside an Input Group and divided in 2 columns.
+        -->
+
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Add track</h4>
+          </div>
+          <div class="modal-body">
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Track number</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Track length</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Track featuring</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+            </div>
+
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Track lenght</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input type="checkbox" aria-label="Checkbox for following text input" /> <span class="input-group-text pl-2" id="">Live Music</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXERCISE 7
+            Add a "Contact Me" form in the footer.
+            The "Contact Me" form has 2 fields:
+            - Email
+            - Text of the message
+            Use the correct Bootstrap styles for styling the buttons
+        -->
+    <!-- EXERCISE 8 
+            Add to the footer an extra column with the same links of the top nav.
+        -->
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center text-md-left ">
+        <div class="row">
+          <div class="col-6">
+            <form>
+              <h4 class="pt-3">Contact Me</h4>
+
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Enter Text Here</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            </form>
+          </div>
+          <div class="col-6">
+            <nav aria-label="bredcrump-buttom" class="bredcrump-buttom">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="col">
+            <div class="footer-copyright text-center py-3">
+              © 2019 Copyright:
+              <a href="#"> www.rasmusfabius.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="M2-D6-INDEX.js"></script>
+  </body>
+</html>

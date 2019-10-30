@@ -1,0 +1,23 @@
+.jumbotron {
+  background: url("/music.jpeg");
+  background-size: cover;
+  osition: ;
+}
+
+.container li {
+  font-size: 2rem;
+}
+
+img {
+  width: 250px;
+  height: 300px;
+}
+
+.btn-hidden {
+  color: purple;
+  font-size: 76px;
+}
+
+footer {
+  background-color: lightgray;
+}
